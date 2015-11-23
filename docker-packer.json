@@ -17,7 +17,15 @@
   "provisioners":[
     {
       "type": "shell",
-      "inline": ["apt-get -y update; apt-get install -y libgecode-dev"]
+      "inline": [
+        "apt-get -y update",
+        "apt-get install -y libgecode-dev unzip",
+        "mkdir packer",
+        "cd packer",
+        "wget https://releases.hashicorp.com/packer/0.8.6/packer_0.8.6_linux_amd64.zip",
+        "unzip *.zip",
+        "ln -s /packer/packer /usr/local/bin/packer"
+      ]
     }
   ],
 
@@ -26,7 +34,7 @@
       {
         "type": "docker-tag",
         "repository": "diamond29/packer",
-        "tag": "0.1"
+        "tag": "0.2"
       },
       "docker-push"
     ]
