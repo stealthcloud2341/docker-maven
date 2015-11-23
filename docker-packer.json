@@ -1,0 +1,32 @@
+{
+  "variables": {
+    "docker_user": "{{env `DOCKER_USER`}}",
+    "docker_password": "{{env `DOCKER_PASSWORD`}}"
+  },
+
+  "builders":[{
+    "type": "docker",
+    "image": "ruby:2.2.3",
+    "commit": true,
+    "login_username": "{{user `docker_user`}}",
+    "login_password": "{{user `docker_password`}}"
+  }],
+
+  "provisioners":[
+    {
+      "type": "shell",
+      "inline": ["apt-get -y update; apt-get install -y libgecode-dev"]
+    }
+  ],
+
+  "post-processors": [
+    [
+      {
+        "type": "docker-tag",
+        "repository": "diamond29/packer",
+        "tag": "0.1"
+      },
+      "docker-push"
+    ]
+  ]
+}
