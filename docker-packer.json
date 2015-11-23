@@ -1,13 +1,15 @@
 {
   "variables": {
     "docker_user": "{{env `DOCKER_USER`}}",
-    "docker_password": "{{env `DOCKER_PASSWORD`}}"
+    "docker_password": "{{env `DOCKER_PASSWORD`}}",
+    "docker_email": "{{env `DOCKER_EMAIL`}}"
   },
 
   "builders":[{
     "type": "docker",
     "image": "ruby:2.2.3",
     "commit": true,
+    "login_email": "{{user `docker_email`}}",
     "login_username": "{{user `docker_user`}}",
     "login_password": "{{user `docker_password`}}"
   }],
