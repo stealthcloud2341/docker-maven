@@ -3,12 +3,12 @@ set -e
 set -x
 
 apt-get -y update
-apt-get install -y --fix-missing curl libgecode-dev=3.7.1-3 unzip wget
+apt-get install -y --fix-missing curl libgecode-dev=3.7.1-3 unzip wget git
 
 curl -sSL https://get.rvm.io | bash
-echo ". /etc/profile.d/rvm.sh" >> /root/.bashrc
 . /etc/profile.d/rvm.sh
 rvm install 2.2.3
+gem install bundler
 
 mkdir packer
 cd packer
