@@ -5,6 +5,8 @@ set -x
 apt-get -y update
 apt-get install -y --fix-missing curl libgecode-dev=3.7.1-3 unzip wget git
 
+git config http.sslVerify false
+
 curl -sSL https://get.rvm.io | bash
 . /etc/profile.d/rvm.sh
 rvm install 2.2.3
