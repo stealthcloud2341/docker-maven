@@ -26,7 +26,7 @@
       {
         "type": "docker-tag",
         "repository": "diamond29/packer",
-        "tag": "0.71"
+        "tag": "0.7.2"
       },
       "docker-push"
     ]
