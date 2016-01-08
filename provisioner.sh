@@ -3,7 +3,7 @@ set -e
 set -x
 
 apt-get -y update
-apt-get install -y --fix-missing curl libgecode-dev=3.7.1-3 unzip wget git zip
+apt-get install -y --fix-missing curl libgecode-dev=3.7.1-3 unzip wget git zip docker
 
 git config --global http.sslVerify false
 
