@@ -1,4 +1,4 @@
-FROM jpetazzo/dind
+FROM gitlab/dind
 MAINTAINER Greg Diamond
 
 RUN apt-get -y update
