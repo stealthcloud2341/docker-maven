@@ -1,10 +1,6 @@
 FROM gitlab/dind
 MAINTAINER Greg Diamond
 
-RUN locale-gen en_US.UTF-8
-
-ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-
 RUN apt-get -y update
 RUN apt-get install -y --fix-missing curl build-essential g++ unzip wget git zip libgmp-dev ruby-dev
 
@@ -23,3 +19,7 @@ RUN ln -s /packer/packer /usr/local/bin/packer
 RUN wget http://www.gecode.org/download/gecode-3.7.3.tar.gz && tar -xvf gecode-3.7.3.tar.gz
 
 RUN cd gecode-3.7.3 && ./configure && make && make install
+
+RUN locale-gen en_US.UTF-8
+
+ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8

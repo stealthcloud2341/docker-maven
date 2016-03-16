@@ -1,7 +1,7 @@
 #!/bin/env bash
 set -e
 
-a=0.9.5
+a=0.9.6
 
 docker build -t diamond29/packer:$a .
 
