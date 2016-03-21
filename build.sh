@@ -1,8 +1,8 @@
 #!/bin/env bash
 set -e
 
-a=0.9.6
+a=0.1.0
 
-docker build -t diamond29/packer:$a .
+docker build -t stealthcloud2341/gitlab_ci_runner:$a .
 
-docker push diamond29/packer:$a
+docker push stealthcloud2341/gitlab_ci_runner:$a

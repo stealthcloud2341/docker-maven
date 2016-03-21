@@ -1,5 +1,5 @@
 FROM gitlab/dind
-MAINTAINER Greg Diamond
+MAINTAINER Chris Byrd
 
 RUN apt-get -y update
 RUN apt-get install -y --fix-missing curl build-essential g++ unzip wget git zip libgmp-dev ruby-dev
