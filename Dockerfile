@@ -12,7 +12,7 @@ RUN /bin/bash -l -c "rvm install 2.2.3"
 RUN /bin/bash -l -c "gem install bundler"
 
 RUN mkdir packer
-RUN cd packer && wget https://releases.hashicorp.com/packer/0.10.0/packer_0.10.0_linux_amd64.zip && unzip *.zip
+RUN cd packer && wget https://releases.hashicorp.com/packer/0.8.6/packer_0.8.6_linux_amd64.zip && unzip *.zip
 
 RUN ln -s /packer/packer /usr/local/bin/packer
 
