@@ -3,6 +3,6 @@ set -e
 
 a=0.1.0
 
-docker build -t stealthcloud2341/gitlab_ci_runner:$a .
+docker build -t stealthcloud2341/gitlab_ci_maven_runner:$a .
 
-docker push stealthcloud2341/gitlab_ci_runner:$a
+docker push stealthcloud2341/gitlab_ci_maven_runner:$a
