@@ -16,6 +16,6 @@ RUN wget http://www.gecode.org/download/gecode-3.7.3.tar.gz && tar -xvf gecode-3
 
 RUN cd gecode-3.7.3 && ./configure && make && make install
 
-RUN locale-gen en_US.UTF-8
+RUN locale-gen "en_US.UTF-8"
 
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
