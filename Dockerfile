@@ -1,7 +1,7 @@
 FROM maven:3.3.9-jdk-8
 
 RUN apt-get -y update
-RUN apt-get install -y --fix-missing curl build-essential g++ unzip wget git zip libgmp-dev ruby-dev
+RUN apt-get install -y --fix-missing curl build-essential g++ unzip wget git zip libgmp-dev ruby-dev language-pack-en
 
 RUN git config --global http.sslVerify false
 RUN command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
