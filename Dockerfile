@@ -10,6 +10,8 @@ RUN \curl -L https://get.rvm.io | bash -s stable
 RUN /bin/bash -l -c "rvm install 2.2.3"
 RUN /bin/bash -l -c "gem install bundler"
 RUN /bin/bash -l -c "gem install test-kitchen"
+RUN /bin/bash -l -c "gem install chef"
+RUN /bin/bash -l -c "gem install chef-dk"
 RUN /bin/bash -l -c "gem install chef-provisioning-vsphere"
 
 RUN wget http://www.gecode.org/download/gecode-3.7.3.tar.gz && tar -xvf gecode-3.7.3.tar.gz
