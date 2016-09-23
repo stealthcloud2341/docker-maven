@@ -50,15 +50,6 @@
       The id mentioned here must appear in the <distributionManagement> section
       of the artifact's POM.
     -->
-<!--     <server>
-      <id>singularity</id>
-      <username>deployment</username>
-      <password>Unisys*1234</password>
-      <configuration>
-        <timeout>9000000</timeout>
-        <wagonProvider>wagon-ahc</wagonProvider>
-      </configuration>
-    </server> -->
 
     <!--
       The credentials to use when deploying artifacts to the Singularity Nexus repository
