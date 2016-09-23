@@ -1,0 +1,101 @@
+<!--
+                          MAVEN SETTINGS FILE
+
+  This file is the standard Maven settings.xml file used in the Singularity build
+  environment. It is used on all Hudson build slaves and can also be used on
+  developer's PC, though it might need some customization there.
+  
+  On the Hudson build slaves, this file should be placed at %M2_HOME%/conf/settings.xml
+  On a developer's PC is can be placed at the same location, or at %USERPROFILE%\.m2\settings.xml
+
+  For more details on what can go into this file, see http://maven.apache.org/settings.html
+-->
+<settings>
+
+  <!--
+    The location of the local repository.
+    
+    The value given here uses the current drive on a Windows machine. Thus if
+    builds run on the C: drive, the repository will be at c:/data/m2_repo
+    but if builds run on the D: drive, they will be at d:/data/m2_repo.
+    The value given here also works on Linux machines, though you will have to
+    create the data directory and assign permissions to it.
+
+    NOTE: Use forward slashes as directory separators, even on Windows.
+          Backward slashes are often used as escape characters.
+    
+    If not specified, the repository is located at %USERPROFILE%/.m2/repository
+  -->
+  <localRepository>/data/m2_repo/</localRepository>
+
+  <!--
+    The location of the remote repository.
+    
+    The value given here is for the Nexus repository used by Singularity.
+    To use a different Nexus repository, look at the repository list within
+    Nexus - the URL is listed along with each repository. You usually
+    want to use the "public" repository because it is a "group" repository
+    that is a proxy for the all the other repositories defined in Nexus.
+
+    If not specified, Maven Central (http://repo1.maven.org/maven2) is used.
+  -->
+
+
+  <servers>
+    <!--
+      The credentials to use when deploying artifacts to the Singularity Nexus repository
+      via the HTTP/S transfer mechanism (either the default mechanism or using
+      the wagon-ahc extension).
+      
+      The id mentioned here must appear in the <distributionManagement> section
+      of the artifact's POM.
+    -->
+<!--     <server>
+      <id>singularity</id>
+      <username>deployment</username>
+      <password>Unisys*1234</password>
+      <configuration>
+        <timeout>9000000</timeout>
+        <wagonProvider>wagon-ahc</wagonProvider>
+      </configuration>
+    </server> -->
+
+    <!--
+      The credentials to use when deploying artifacts to the Singularity Nexus repository
+      via the secure shell (ssh) transfer mechanism. That is, when using the
+      wagon-ssh-external extension.
+      
+      The <privateKey> mentioned here is on the Hudson build slaves. See the page on the
+      Problem with Large Artifacts (in the Maven Artifact plugin documentation) for details
+      on configuring ssh:
+      https://ustr-hudson-1.na.uis.unisys.com/job/Maven%20Artifact%20Plugin/site/large.html
+
+      The id mentioned here must appear in the <distributionManagement> section
+      of the artifact's POM.
+
+      NOTE: Use the ssh transfer mechanism only if the HTTP/S mechanism does not work.
+    -->
+
+
+    <!--
+      The following server is used to deploy sites to Nexus
+    -->
+
+
+  </servers>
+  
+
+  
+  <!--
+    Enables use of the short names for the Unisys plugins when passed as goals to the
+    mvn command. For example, you can run:
+    
+      mvn package:iso
+      
+    instead of runing:
+    
+      mvn com.unisys.maven.plugins:maven-package-plugin:iso
+  -->
+
+
+</settings>
