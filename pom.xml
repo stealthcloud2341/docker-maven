@@ -103,7 +103,8 @@
     <dependency>
       <groupId>org.sonatype.forge</groupId>
       <artifactId>forge-parent</artifactId>
-      <version>6</version>    
+      <version>6</version>
+      <type>pom</type>
     </dependency>
     <dependency>
       <groupId>com.ning</groupId>
@@ -113,7 +114,8 @@
     <dependency>
       <groupId>org.sonatype.oss</groupId>
       <artifactId>oss-parent</artifactId>
-      <version>5</version>    
+      <version>5</version>
+      <type>pom</type>
     </dependency>
     <dependency>
       <groupId>org.jboss.netty</groupId>
@@ -123,8 +125,94 @@
     <dependency>
       <groupId>org.jboss</groupId>
       <artifactId>jboss-parent</artifactId>
-      <version>5</version>    
+      <version>5</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.6.1</version>    
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus-utils</artifactId>
+      <version>2.0.5</version>    
     </dependency>	  
+    <dependency>
+      <groupId>org.apache.maven.wagon</groupId>
+      <artifactId>wagon-provider-api</artifactId>
+      <version>1.0-beta-6</version>    
+    </dependency>	  
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-javadoc-plugin</artifactId>
+      <version>2.10.3</version>    
+    </dependency>	  
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-source-plugin</artifactId>
+      <version>3.0.0</version>    
+    </dependency>	  
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-clean-plugin</artifactId>
+      <version>2.5</version>    
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-help-plugin</artifactId>
+      <version>2.2</version>    
+    </dependency>	  
+    <dependency>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>buildnumber-maven-plugin</artifactId>
+      <version>1.4</version>    
+    </dependency>	  
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-resources-plugin</artifactId>
+      <version>2.6</version>    
+    </dependency>	  
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.5.1</version>    
+    </dependency>	  
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>2.12.4</version>    
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <version>2.6</version>    
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-install-plugin</artifactId>
+      <version>2.4</version>    
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpcore</artifactId>
+      <version>4.2.2</version>    
+    </dependency>	  
+    <dependency>
+      <groupId>com.thoughtworks.qdox</groupId>
+      <artifactId>qdox</artifactId>
+      <version>1.12.1</version>    
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.14</version>    
+    </dependency>	  
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.1.1</version>    
+    </dependency>  
     <!-- Plugins during build -->
     <dependency>
       <groupId>org.apache.maven.plugins</groupId>
