@@ -94,6 +94,38 @@
       <!-- Version 1.5.9 is broke, doesn't generate any api docs -->
       <version>1.5.8</version>
     </dependency>
+    <!-- Additional jars not in project pom -->
+    <dependency>
+      <groupId>org.sonatype.maven</groupId>
+      <artifactId>wagon-ahc</artifactId>
+      <version>1.2.0</version>    
+    </dependency>
+    <dependency>
+      <groupId>org.sonatype.forge</groupId>
+      <artifactId>forge-parent</artifactId>
+      <version>6</version>    
+    </dependency>
+    <dependency>
+      <groupId>com.ning</groupId>
+      <artifactId>async-http-client</artifactId>
+      <version>1.6.1</version>    
+    </dependency>
+    <dependency>
+      <groupId>org.sonatype.oss</groupId>
+      <artifactId>oss-parent</artifactId>
+      <version>5</version>    
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.netty</groupId>
+      <artifactId>netty</artifactId>
+      <version>3.2.4.Final</version>    
+    </dependency>
+    <dependency>
+      <groupId>org.jboss</groupId>
+      <artifactId>jboss-parent</artifactId>
+      <version>5</version>    
+    </dependency>	  
+    <!-- Plugins during build -->
     <dependency>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-help-plugin</artifactId>
