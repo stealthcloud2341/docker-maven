@@ -23,23 +23,28 @@ COPY pom.xml  /tmp
 RUN cd /tmp && mvn compile
 
 RUN mkdir /tmp/pom2
-COPY pom2.xml  /tmp/pom.xml
+COPY pom2.xml  /tmp/pom2
+RUN mv /tmp/pom2/pom2.xml /tmp/pom2/pom.xml
 RUN cd /tmp/pom2 && mvn compile
 
 RUN mkdir /tmp/pom3
-COPY pom3.xml  /tmp/pom.xml
+COPY pom3.xml  /tmp/pom3
+RUN mv /tmp/pom3/pom3.xml /tmp/pom3/pom.xml
 RUN cd /tmp/pom3 && mvn compile
 
 RUN mkdir /tmp/pom4
-COPY pom4.xml  /tmp/pom.xml
+COPY pom4.xml  /tmp/pom4
+RUN mv /tmp/pom4/pom4.xml /tmp/pom4/pom.xml
 RUN cd /tmp/pom4 && mvn compile
 
 RUN mkdir /tmp/pom5
-COPY pom5.xml  /tmp/pom.xml
+COPY pom5.xml  /tmp/pom5
+RUN mv /tmp/pom5/pom5.xml /tmp/pom5/pom.xml
 RUN cd /tmp/pom5 && mvn compile
 
 RUN mkdir /tmp/pom6
-COPY pom6.xml  /tmp/pom.xml
+COPY pom6.xml  /tmp/pom6
+RUN mv /tmp/pom6/pom6.xml /tmp/pom6/pom.xml
 RUN cd /tmp/pom6 && mvn compile
 
 # RUN locale-gen "en_US.UTF-8"
