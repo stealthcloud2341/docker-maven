@@ -47,6 +47,26 @@ COPY pom6.xml  /tmp/pom6
 RUN mv /tmp/pom6/pom6.xml /tmp/pom6/pom.xml
 RUN cd /tmp/pom6 && mvn compile
 
+RUN mkdir /tmp/pom7
+COPY pom7.xml  /tmp/pom7
+RUN mv /tmp/pom7/pom7.xml /tmp/pom7/pom.xml
+RUN cd /tmp/pom7 && mvn compile
+
+RUN mkdir /tmp/pom8
+COPY pom8.xml  /tmp/pom8
+RUN mv /tmp/pom8/pom8.xml /tmp/pom8/pom.xml
+RUN cd /tmp/pom8 && mvn compile
+
+RUN mkdir /tmp/pom9
+COPY pom9.xml  /tmp/pom9
+RUN mv /tmp/pom9/pom9.xml /tmp/pom9/pom.xml
+RUN cd /tmp/pom9 && mvn compile
+
+RUN mkdir /tmp/pom10
+COPY pom10.xml  /tmp/pom10
+RUN mv /tmp/pom10/pom10.xml /tmp/pom10/pom.xml
+RUN cd /tmp/pom10 && mvn compile
+
 # RUN locale-gen "en_US.UTF-8"
 
 # ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
