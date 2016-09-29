@@ -1,7 +1,7 @@
 #!/bin/env bash
 set -e
 
-a=0.1.8
+a=0.1.9
 
 docker build -t stealthcloud2341/gitlab_ci_maven_runner:$a .
 
