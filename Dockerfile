@@ -67,6 +67,11 @@ COPY pom10.xml  /tmp/pom10
 RUN mv /tmp/pom10/pom10.xml /tmp/pom10/pom.xml
 RUN cd /tmp/pom10 && mvn compile
 
+RUN mkdir /tmp/pom11
+COPY pom11.xml  /tmp/pom11
+RUN mv /tmp/pom11/pom11.xml /tmp/pom11/pom.xml
+RUN cd /tmp/pom11 && mvn compile
+
 # RUN locale-gen "en_US.UTF-8"
 
 # ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
