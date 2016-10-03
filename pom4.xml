@@ -47,6 +47,16 @@
       <artifactId>httpcore</artifactId>
       <version>4.2.2</version>
     </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.9</version>
+   </dependency>
+   <dependency>
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus-interpolation</artifactId>
+      <version>1.21</version>
+   </dependency>
   </dependencies>
 
     <build>
